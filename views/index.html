@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app="app" class="img-responsive">
+<head>
+	<title>Ang1_Template</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Micah Dunson">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<!-- =========   Bootstrap 4 Alpha CSS   ========= -->
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous"> -->
+	<!-- <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css'> -->
+	<!-- Bootstrap Font: Awesome -->
+	<link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.min.css'>
+	<!-- Custom Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="/css/Home.css">
+	<link rel="stylesheet" type="text/css" href="/css/Log-Reg.css">
+	<link rel="stylesheet" type="text/css" href="/css/Profile.css">
+	<link rel="stylesheet" type="text/css" href="/css/Modal.css">
+
+</head>
+<body ng-controller='GlobalController as nav'>
+
+															<!-- ONLY SEE IF USER LOGGED IN -->
+				<div ng-hide='!nav.status.username'layout='row' class="nav navbar-nav center" >
+					<!-- New Addition -->
+					<md-input-container id="NavRow">
+						<div id='headCon' class="container">
+							<div class="login">
+								<a class="navbar-brand"></a>
+								<ul id="bar">
+									<li><a href="#" class="navbar-brand" style="background:none;margin-top:-10px;" ng-click="nav.logout()">Log Out</a></li>
+									<li><a href="" ui-sref="Home" class="navbar-brand" style="background:none;margin-top:-10px;" id="myBtn2">Home</a></li>
+									<li><a href="#top" class="navbar-brand" style="background:none;margin-top:-10px;" ui-sref="Profile">Profile</a></li>
+									<li><a href="#top" class="navbar-brand" style="background:none;margin-top:-10px;" ui-sref="About">About Here</a></li>
+								</ul>
+							</div><!-- end addition -->
+						</div><!-- End Head Conatainer -->
+					</md-input-container>
+					<hr>
+				</div><!-- End Hidden Navigation Conatainer -->
+
+			<ui-view></ui-view>
+
+	<!-- JQuery -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!-- <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script> -->
+	<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.3.1/js/tether.min.js"></script> -->
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script> -->
+
+	<script src="https://cdn.firebase.com/js/client/2.0.2/firebase.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-serialize-object/2.0.0/jquery.serialize-object.compiled.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/path.js/0.8.4/path.min.js" ></script>
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.14/angular-ui-router.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/0.11.4/angular-material.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-aria.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-animate.js"></script>
+	<!-- Material Design Icons -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.0/angular-material-icons.min.js"></script>
+	<!-- Angular-UI-Bootstrap -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap.min.js"></script>
+
+	<!-- =================  Global Src ===========================-->
+	<script src="/javascript/app.js"></script>
+	<script src="/javascript/Pro-Logic.js"></script>
+	<!-- <script src="/javascript/shop.js"></script> -->
+	<!-- Factories -->
+	<script src="/javascript/services/HomeFactory.js"></script>
+	<script src="/javascript/services/UserFactory.js"></script>
+	<script src="/javascript/services/AuthInterceptor.js"></script>
+	<!-- Controllers -->
+	<script src="/javascript/controllers/GlobalController.js"></script>
+	<script src="/javascript/controllers/MainController.js"></script>
+</body>
+</html>

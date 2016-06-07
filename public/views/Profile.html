@@ -1,0 +1,76 @@
+<div ng-controller='MainController as vm'>
+  <article class="container">
+    <div id="wrapper" class="profile-wrap">
+      <h1 id="pageHead" class="top">View {{nav.status.username}}'s Profile</h1>
+
+  <!-- ============================================
+              PROFILE IMG AND SOCIAL MEDIA LINKS
+ =================================================-->
+ <div class="row flex-container">
+      <figure id="user" class="col-lg-4 flex-item">
+        <img id="userImg"src="http://galleryrf.ru/images/reviews_img/no_img.png" alt="The Pulpit Rock" width="228" height="228">
+        <figcaption class="m-t-1">Follow {{nav.status.username}} on social media.</figcaption>
+        <a href="#"><img id="fb-icon" src="https://www.tpfactory.com/wp-content/uploads/2015/03/Facebook_Icon_Large.png" width="30" alt="Facebook icon" /></a>
+        <a href="#"><img id="tw-icon" src="http://icons.iconarchive.com/icons/limav/flat-gradient-social/512/Twitter-icon.png" width="30" alt="Twitter icon" /></a>
+        <a href="#"><img id="yt-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Youtube_icon.svg/2000px-Youtube_icon.svg.png" width="30" alt="YouTube icon" /></a>
+        <a href="#"><img id="sc-icon" src="https://mir-s3-cdn-cf.behance.net/wip/disp/333183.53e69480adf10.png" width="30" alt="Sound Cloud icon" /></a>
+        <a href="#"><img id="ig-icon" src="http://3835642c2693476aa717-d4b78efce91b9730bcca725cf9bb0b37.r51.cf1.rackcdn.com/Instagram_App_Large_May2016_200.png" width="30" alt="Instagram icon" /></a>
+        <br>
+        <!-- Large modal -->
+        <!-- <button id="Add"class="btn btn-primary add-btn" data-toggle="modal" data-target=".bd-example-modal-lg">Add A Profile</button> -->
+        <!-- <button id="Edit"class="btn btn-primary edit-btn" data-toggle="modal" data-target=".bd-example-modal-2-lg">Edit Profile</button> -->
+        <div class="modal-container">
+          <input id="modal-toggle" type="checkbox">
+          <button>Edit Profile</button>
+          <div class="modal-backdrop">
+            <div class="modal-content">
+              <label class="modal-close" for="modal-toggle">x</label>
+              <h2>Edit Profile Modal</h2>
+              <hr />
+              <p>Simple Responsive CSS-Only Modal Demo</p>
+            
+              <label class="modal-close button" for="modal-toggle">OK</label>
+            </div>
+          </div>
+        </div>
+
+
+      </figure>
+
+
+    <!--=================================================
+          DASHBOARD / PROFILE SCREEN
+    ================================================= -->
+    <section class="lg-screen flex-item item1">
+      <p>
+        W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using this site, you agree to have read and accepted our terms of use, cookie and privacy policy. Copyright 1999-2016 by Refsnes Data. All Rights Reserved.
+      </p>
+    </section>
+
+</div>
+
+
+    </div>
+  </article>   <!-- / CONTAINER -->
+
+  <!--============ EDIT Profile Modal ============-->
+  <!-- <div class="modal-container">
+    <input id="modal-toggle" type="checkbox">
+    <button>Edit Profile</button>
+    <div class="modal-backdrop">
+      <div class="modal-content">
+        <label class="modal-close" for="modal-toggle">x</label>
+        <h2>Edit Profile Modal</h2>
+        <hr />
+        <p>Simple Responsive CSS-Only Modal Demo</p>
+        <label class="modal-close button" for="modal-toggle">OK</label>
+      </div>
+    </div>
+  </div> -->
+
+
+  <!-- END EDIT MODAL -->
+
+
+  <footer>&copy 2016 Phoja Unlimited LLC. All Rights Reserved</footer>
+</div>

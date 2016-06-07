@@ -1,0 +1,66 @@
+#form-wrap, #logForm, #regForm {
+  display: flex;
+}
+#NavRow {
+  text-align: center;
+}
+#bar {
+  padding:1.5em;
+
+}
+.login {
+  background: #aaa;
+  margin: -14px auto;
+}
+ li{
+  display: inline-block;
+  margin: auto .5em;
+}
+
+/*==========================================
+        LOGIN FORM
+==========================================*/
+#form-wrap {
+  background: #ddd;
+  border:5px solid #000;
+  display: inline-block;
+  border-radius:12px;
+  max-width: 500px;
+  min-width: 200px;
+  width: 100%;
+  margin: 5em auto;
+}
+.formHead {
+  text-align:center;
+  padding-top: .5em;
+}
+
+/*Center login/register buttons*/
+#btn-group-wrap {
+  text-align:center
+}
+.btn-group {
+  width: 100%;
+}
+
+/*form label styling*/
+#form-wrap label {
+  font-weight: bold;
+
+}
+.log input {
+  border-radius: 4px;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+}
+.log input:focus {
+  background: rgb(226, 235, 154);
+}
+
+/*form button spacing*/
+.logreg {
+  display: inline-block;
+  margin:5% 1em;
+}

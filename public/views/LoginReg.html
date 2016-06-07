@@ -1,0 +1,77 @@
+
+<div id="hideLogRegForm">
+  <div ng-show="nav.isLogin">
+
+    <form id="logForm" class="container">
+  		<!-- LOGIN -->
+  			<div id="form-wrap" class="col-md-12">
+  				<h3 class="formHead">Sign In</h3><hr>
+
+  				<md-input-container class="log">
+  					<label for="userName">User Name:</label><br>
+  					<input id="userName"ng-model="nav.user.username">
+  				</md-input-container><br>
+
+  				<md-input-container class="log" style='' >
+  					<label for="userPassword">Password:</label><br>
+  					<input id="userPassword" type="password" ng-model="nav.user.password">
+  				</md-input-container><br>
+
+  				<div class="btn-group">
+  					<div id="btn-group-wrap">
+  						<button class="logreg" ng-click="nav.loginUser()">Sign-In</button>
+  						<a class="logreg" type='button'href='#' ng-click="nav.isLogin = false;" >Register</a>
+  					</div>
+  				</div>
+
+  				<br>
+  				login in with: red or green
+  			</div>
+    </form>
+
+  </div>
+
+  			<!-- REGISTER -->
+
+  <div id='regLog' ng-show="!nav.isLogin">
+
+  	<form id="regForm"class="container" ng-submit="nav.registerUser()">
+
+  			<div id="form-wrap" class="col-md-12">
+  				<h3 class="formHead">Register</h3><hr>
+
+  				<md-input-container class="log">
+  					<label for="userName">User Name:</label><br>
+  					<input id="userName"ng-model="nav.user.username">
+  				</md-input-container>
+
+  				<md-input-container class="log">
+  					<br><label for="userEmail">Email</label><br>
+  					<input type="email" id="userEmail" ng-model="nav.user.email"style='margin-bottom:5px' required>
+  				</md-input-container>
+
+  				<md-input-container class="log" style='' >
+  					<label for="userPassword">Password:</label><br>
+  					<input id="userPassword"type="password" ng-model="nav.user.password">
+  				</md-input-container>
+
+  				<md-input-container class="log">
+  					<br><label for="conPassword">Confirm Password</label><br>
+  					<input id="conPassword"type="password" ng-model="nav.user.confirmPassword" style='margin-bottom:-10px' required>
+  				</md-input-container>
+
+  				<br><div ng-show="nav.user.password && nav.user.confirmPassword && !(nav.user.password === nav.user.confirmPassword)" style="color: red">Your passwords must match.</div>
+
+  				<div class="btn-group">
+  					<div id="btn-group-wrap">
+  						<button class="logreg">Join Now</button>
+  						<a class="logreg" type='button' ng-click="nav.isLogin = true;" href='#'>Already a member</a>
+              <a ui-sref='Splash'>Leave The Party</a>
+  					</div>
+  				</div>
+
+  				<br>
+  			</div>
+    </form>
+  </div>
+</div>
