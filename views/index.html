@@ -32,7 +32,7 @@
 								<ul id="bar">
 									<li><a href="#" class="navbar-brand" style="background:none;margin-top:-10px;" ng-click="nav.logout()">Log Out</a></li>
 									<li><a href="" ui-sref="Home" class="navbar-brand" style="background:none;margin-top:-10px;" id="myBtn2">Home</a></li>
-									<li><a href="#top" class="navbar-brand" style="background:none;margin-top:-10px;" ui-sref="Profile">Profile</a></li>
+									<li><a href="#top" ng-click='location.reload();' class="navbar-brand" style="background:none;margin-top:-10px;" ui-sref="Profile">Profile</a></li>
 									<li><a href="#top" class="navbar-brand" style="background:none;margin-top:-10px;" ui-sref="About">About Here</a></li>
 								</ul>
 							</div><!-- end addition -->
@@ -69,6 +69,8 @@
 	<!-- =================  Global Src ===========================-->
 	<script src="/javascript/app.js"></script>
 	<script src="/javascript/Pro-Logic.js"></script>
+	<script src="/javascript/Modal.js"></script>
+	<script src="/javascript/EditModal.js"></script>
 	<!-- <script src="/javascript/shop.js"></script> -->
 	<!-- Factories -->
 	<script src="/javascript/services/HomeFactory.js"></script>
